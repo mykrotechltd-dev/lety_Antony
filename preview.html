@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lety Antony Fashion House | 7-Day Custom Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: white; color: #1f2937; }
+        h1, h2, h3 { font-family: Georgia, serif; }
+        .gradient-text { background: linear-gradient(135deg, #0f3a2f 0%, #14a38f 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-primary { background: #0f3a2f; color: white; padding: 16px 32px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+        .btn-primary:hover { background: #0a2a23; }
+        .btn-secondary { border: 2px solid #0f3a2f; color: #0f3a2f; padding: 14px 30px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: all 0.2s; background: white; }
+        .btn-secondary:hover { background: #f0f9f8; }
+        .card { background: white; border: 1px solid #e5e7eb; border-radius: 8px; padding: 32px; transition: all 0.3s; }
+        .card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        section { padding: 80px 24px; }
+        .container { max-width: 80rem; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-200">
+        <div class="container flex justify-between items-center py-6">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-green-800 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-lg">LA</span>
+                </div>
+                <span class="text-xl font-bold text-green-900 hidden sm:inline">Lety Antony</span>
+            </div>
+            <nav class="hidden md:flex gap-8">
+                <a href="#services" class="text-gray-700 hover:text-green-700">Services</a>
+                <a href="#process" class="text-gray-700 hover:text-green-700">Process</a>
+                <a href="#why" class="text-gray-700 hover:text-green-700">Why Us</a>
+                <button class="btn-primary text-sm">Order Now</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section style="background: linear-gradient(to bottom, #f0f9f8, white); padding-top: 150px;">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl mb-6">
+                        Your Style, Your Fabric, <span class="gradient-text">Seven Days</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Custom fashion that doesn't compromise on quality or timeline. We combine AI visualization with master craftsmanship to deliver your dream outfit on time, every time.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-12">
+                        <button class="btn-primary">Start Your Order</button>
+                        <button class="btn-secondary">Learn More</button>
+                    </div>
+                    <div class="grid grid-cols-3 gap-8 text-center">
+                        <div>
+                            <p class="text-3xl font-bold text-green-700">7</p>
+                            <p class="text-sm text-gray-600">Working Days</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-green-700">100%</p>
+                            <p class="text-sm text-gray-600">Custom Made</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-green-700">Real-Time</p>
+                            <p class="text-sm text-gray-600">Tracking</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-green-100 rounded-2xl h-96 flex items-center justify-center text-green-300 text-center">
+                    <div>
+                        <svg class="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <p>AI Visualization Preview</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" style="background: white;">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl mb-4">What We Offer</h2>
+                <p class="text-xl text-gray-600">Comprehensive custom fashion services tailored to your needs</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card">
+                    <div class="text-green-700 mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">7-Day Production</h3>
+                    <p class="text-gray-600">Your custom garment, delivered within seven working days. Guaranteed.</p>
+                </div>
+                <div class="card">
+                    <div class="text-green-700 mb-4">👁️</div>
+                    <h3 class="text-xl font-bold mb-3">AI Visualization</h3>
+                    <p class="text-gray-600">See your finished outfit before a single cut is made. Approve with confidence.</p>
+                </div>
+                <div class="card">
+                    <div class="text-green-700 mb-4">🚚</div>
+                    <h3 class="text-xl font-bold mb-3">Real-Time Tracking</h3>
+                    <p class="text-gray-600">WhatsApp & SMS updates at every stage. Know exactly where your garment is.</p>
+                </div>
+                <div class="card">
+                    <div class="text-green-700 mb-4">👥</div>
+                    <h3 class="text-xl font-bold mb-3">Corporate Solutions</h3>
+                    <p class="text-gray-600">Bulk orders, uniform production, and branded wear for organizations.</p>
+                </div>
+                <div class="card">
+                    <div class="text-green-700 mb-4">🏆</div>
+                    <h3 class="text-xl font-bold mb-3">Premium Quality</h3>
+                    <p class="text-gray-600">Every piece passes our documented QC checklist before delivery.</p>
+                </div>
+                <div class="card">
+                    <div class="text-green-700 mb-4">✨</div>
+                    <h3 class="text-xl font-bold mb-3">Styling Consultancy</h3>
+                    <p class="text-gray-600">Expert advice on fabrics, colors, and styles that work for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" style="background: #f0f9f8;">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl mb-4">The 7-Day Production Pipeline</h2>
+                <p class="text-xl text-gray-600">From concept to collection, tracked every step</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4 mb-12">
+                <div class="text-center">
+                    <div class="bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">1</div>
+                    <p class="text-sm font-semibold text-green-700">Day 0</p>
+                    <h4 class="font-bold text-sm my-2">Order Intake</h4>
+                    <p class="text-xs text-gray-600">Measurements</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">2</div>
+                    <p class="text-sm font-semibold text-green-700">Day 1</p>
+                    <h4 class="font-bold text-sm my-2">Fabric Check</h4>
+                    <p class="text-xs text-gray-600">Inspection</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">3</div>
+                    <p class="text-sm font-semibold text-green-700">Day 2</p>
+                    <h4 class="font-bold text-sm my-2">Cutting</h4>
+                    <p class="text-xs text-gray-600">Precision cut</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">4</div>
+                    <p class="text-sm font-semibold text-green-700">Days 3-5</p>
+                    <h4 class="font-bold text-sm my-2">Sewing</h4>
+                    <p class="text-xs text-gray-600">Assembly</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">5</div>
+                    <p class="text-sm font-semibold text-green-700">Day 6</p>
+                    <h4 class="font-bold text-sm my-2">Finishing</h4>
+                    <p class="text-xs text-gray-600">Details</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">6</div>
+                    <p class="text-sm font-semibold text-green-700">Day 7 AM</p>
+                    <h4 class="font-bold text-sm my-2">QC Check</h4>
+                    <p class="text-xs text-gray-600">Inspection</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">7</div>
+                    <p class="text-sm font-semibold text-green-700">Day 7 PM</p>
+                    <h4 class="font-bold text-sm my-2">Ready</h4>
+                    <p class="text-xs text-gray-600">Collection</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl p-8 border border-green-200">
+                <h3 class="font-bold mb-2">✓ The Process Tracker Guarantee</h3>
+                <p class="text-gray-600">
+                    Every client receives automated WhatsApp & SMS notifications at each stage. You'll always know exactly where your garment is in production.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600">Value-based pricing. You pay for certainty, not just sewing.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="card">
+                    <h3 class="font-bold text-xl mb-2">Tier 1 - Simple</h3>
+                    <p class="text-sm text-gray-600 mb-6">Shirts, skirts, simple gowns</p>
+                    <p class="text-3xl font-bold mb-6 text-green-700">From ₦25,000</p>
+                    <button class="btn-secondary w-full">Book Now</button>
+                </div>
+                <div class="card" style="border: 2px solid #0f3a2f; transform: scale(1.05);">
+                    <h3 class="font-bold text-xl mb-2 text-white bg-green-800 p-2 -m-8 mb-4 rounded-t-md">Tier 2 - Standard</h3>
+                    <p class="text-sm text-gray-600 mb-6">Senator wear, agbada, corporate dresses</p>
+                    <p class="text-3xl font-bold mb-6 text-green-700">From ₦35,000</p>
+                    <button class="btn-primary w-full">Book Now</button>
+                </div>
+                <div class="card">
+                    <h3 class="font-bold text-xl mb-2">Tier 3 - Complex</h3>
+                    <p class="text-sm text-gray-600 mb-6">Beaded gowns, structured jackets, bridal</p>
+                    <p class="text-3xl font-bold mb-6 text-green-700">From ₦50,000</p>
+                    <button class="btn-secondary w-full">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background: #0f3a2f; color: white;">
+        <div class="container text-center">
+            <h2 class="text-white mb-6 text-4xl">Ready to Experience the Difference?</h2>
+            <p class="text-xl mb-8 text-green-100">Your style, your fabric, seven working days. Tracked every step. Guaranteed.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-green-600 text-white px-10 py-4 text-lg font-semibold rounded-lg hover:bg-green-700">Start Your Order</button>
+                <button class="border-2 border-white text-white px-10 py-4 text-lg font-semibold rounded-lg hover:bg-white/10">Schedule Consultation</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #0a1a15; color: white;">
+        <div class="container py-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <h3 class="font-bold text-xl mb-4">Lety Antony</h3>
+                    <p class="text-green-200 text-sm">Your style, your fabric, seven working days. Premium custom fashion with guaranteed delivery.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-green-200">
+                        <li><a href="#" class="hover:text-green-400">7-Day Production</a></li>
+                        <li><a href="#" class="hover:text-green-400">AI Visualization</a></li>
+                        <li><a href="#" class="hover:text-green-400">Express Service</a></li>
+                        <li><a href="#" class="hover:text-green-400">Corporate Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-green-200">
+                        <li><a href="#" class="hover:text-green-400">About</a></li>
+                        <li><a href="#" class="hover:text-green-400">Process</a></li>
+                        <li><a href="#" class="hover:text-green-400">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <div class="space-y-2 text-sm text-green-200">
+                        <p>📍 Abuja, FCT, Nigeria</p>
+                        <p>📞 +234 (0) XXX XXX XXXX</p>
+                        <p>✉️ hello@letyantonyfh.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-green-800 pt-8 text-center text-sm text-green-300">
+                <p>© 2024 Lety Antony Fashion House. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
