@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CheckCircle, Zap, Eye, Truck, Sparkles, Clock, Users, Award, MapPin, Phone, Mail } from 'lucide-react'
@@ -19,8 +20,8 @@ export default function Home() {
                 Custom fashion that doesn't compromise on quality or timeline. We combine AI visualization with master craftsmanship to deliver your dream outfit on time, every time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-primary">Start Your Order</button>
-                <button className="btn-secondary">Learn More</button>
+                <Link href="/order-inquiry" className="btn-primary text-center">Start Your Order</Link>
+                <Link href="#services" className="btn-secondary text-center">Learn More</Link>
               </div>
               <div className="mt-12 grid grid-cols-3 gap-8 text-center">
                 <div>
@@ -323,12 +324,12 @@ export default function Home() {
             Your style, your fabric, seven working days. Tracked every step. Guaranteed.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="btn-accent px-10 py-4 text-lg">
+            <Link href="/order-inquiry" className="btn-accent px-10 py-4 text-lg text-center">
               Start Your Order
-            </button>
-            <button className="px-10 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors">
+            </Link>
+            <Link href="/order-inquiry#inquiry-form" className="px-10 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-center">
               Schedule a Consultation
-            </button>
+            </Link>
           </div>
         </div>
       </section>

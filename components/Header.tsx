@@ -29,7 +29,7 @@ export default function Header() {
           <Link href="#why" className="text-gray-700 hover:text-primary-500 transition-colors">
             Why Us
           </Link>
-          <Link href="#contact" className="btn-primary text-sm">
+          <Link href="/order-inquiry" className="btn-primary text-sm">
             Order Now
           </Link>
         </nav>
@@ -67,9 +67,13 @@ export default function Header() {
             >
               Why Us
             </Link>
-            <button className="btn-primary text-sm w-full">
+            <Link
+              href="/order-inquiry"
+              className="btn-primary text-sm w-full text-center"
+              onClick={() => setIsOpen(false)}
+            >
               Order Now
-            </button>
+            </Link>
           </div>
         </nav>
       )}
