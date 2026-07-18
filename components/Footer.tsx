@@ -1,68 +1,69 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Instagram, Twitter } from 'lucide-react'
+import { Mail, Phone, MapPin, Instagram, MessageCircle } from 'lucide-react'
+
+const WHATSAPP = 'https://wa.me/2340000000000'
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-900 text-white py-16">
+    <footer className="bg-ink text-ivory pt-20 pb-10">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div>
-            <h3 className="font-serif text-xl font-bold mb-4">Lety Antony</h3>
-            <p className="text-primary-200 text-sm leading-relaxed">
-              Your style, your fabric, seven working days. Premium custom fashion with guaranteed delivery.
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          <div className="md:col-span-5">
+            <p className="font-display text-2xl mb-4">Lety Antony</p>
+            <p className="text-ivory/60 max-w-sm leading-relaxed">
+              Bespoke Nigerian couture. Your style, your fabric, seven working days — visualised
+              before we cut, tracked at every stage, delivered on the day.
             </p>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Services</h4>
-            <ul className="space-y-2 text-sm text-primary-200">
-              <li><Link href="#" className="hover:text-accent transition-colors">7-Day Production</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors">AI Visualization</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors">Express Service</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors">Corporate Orders</Link></li>
+          <div className="md:col-span-3">
+            <p className="text-xs uppercase tracking-luxe text-gold-light mb-5">Explore</p>
+            <ul className="space-y-3 text-ivory/70">
+              <li><Link href="/#services" className="hover:text-accent transition-colors">Services</Link></li>
+              <li><Link href="/#process" className="hover:text-accent transition-colors">Our Process</Link></li>
+              <li><Link href="/#gallery" className="hover:text-accent transition-colors">Designs</Link></li>
+              <li><Link href="/order-inquiry" className="hover:text-accent transition-colors">Begin a Commission</Link></li>
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm text-primary-200">
-              <li><Link href="#" className="hover:text-accent transition-colors">About</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors">Process</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors">Testimonials</Link></li>
-              <li><Link href="#" className="hover:text-accent transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
-            <div className="space-y-3 text-sm text-primary-200">
-              <div className="flex items-start gap-2">
-                <MapPin size={16} className="mt-1 flex-shrink-0" />
+          <div className="md:col-span-4">
+            <p className="text-xs uppercase tracking-luxe text-gold-light mb-5">Contact</p>
+            <ul className="space-y-4 text-ivory/70">
+              <li className="flex items-start gap-3">
+                <MapPin size={16} className="mt-1 flex-shrink-0 text-accent" />
                 <span>Abuja, FCT, Nigeria</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone size={16} />
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={16} className="flex-shrink-0 text-accent" />
                 <span>+234 (0) XXX XXX XXXX</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Mail size={16} />
-                <span>hello@letyantonyfh.com</span>
-              </div>
-            </div>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={16} className="flex-shrink-0 text-accent" />
+                <a href="mailto:hello@letyantonyfh.com" className="hover:text-accent transition-colors">
+                  hello@letyantonyfh.com
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <MessageCircle size={16} className="flex-shrink-0 text-accent" />
+                <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">
+                  WhatsApp
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-primary-700 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-300">
-            © {new Date().getFullYear()} Lety Antony Fashion House. All rights reserved.
+        <div className="border-t border-ivory/15 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-xs uppercase tracking-luxe text-ivory/50">
+            © {new Date().getFullYear()} Lety Antony Fashion House
           </p>
-          <div className="flex gap-4">
-            <Link href="#" className="text-primary-300 hover:text-accent transition-colors">
-              <Instagram size={20} />
-            </Link>
-            <Link href="#" className="text-primary-300 hover:text-accent transition-colors">
-              <Twitter size={20} />
-            </Link>
+          <div className="flex gap-5">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-accent transition-colors" aria-label="Instagram">
+              <Instagram size={18} />
+            </a>
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-accent transition-colors" aria-label="WhatsApp">
+              <MessageCircle size={18} />
+            </a>
           </div>
         </div>
       </div>

@@ -65,13 +65,13 @@ export default function OrderInquiry() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-primary-50 to-white">
+      <section className="pt-32 pb-16 bg-bone">
         <div className="container max-w-4xl text-center">
-          <p className="text-sm font-semibold tracking-widest text-primary-500 uppercase mb-4">
+          <p className="eyebrow mb-4">
             Order Inquiry
           </p>
           <h1 className="mb-6">Let&apos;s Bring Your Vision to Life</h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-ink/70 leading-relaxed">
             Lety Antony offers custom-made clothing, personal styling consultations, garment
             rentals, and fashion show participation. Tell us what you have in mind — and we&apos;ll
             handle the rest, tracked every step of the way.
@@ -80,7 +80,7 @@ export default function OrderInquiry() {
       </section>
 
       {/* Services */}
-      <section className="bg-white">
+      <section className="bg-ivory">
         <div className="container">
           <h2 className="text-center mb-14">What We Offer</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -109,9 +109,9 @@ export default function OrderInquiry() {
               const Icon = s.icon
               return (
                 <div key={i} className="card">
-                  <Icon className="text-primary-500 mb-4" size={32} />
+                  <Icon className="text-accent mb-4" size={32} />
                   <h3 className="text-lg font-bold mb-3">{s.title}</h3>
-                  <p className="text-gray-600 text-base">{s.desc}</p>
+                  <p className="text-ink/70 text-base">{s.desc}</p>
                 </div>
               )
             })}
@@ -120,21 +120,21 @@ export default function OrderInquiry() {
       </section>
 
       {/* How Ordering Works — Policies */}
-      <section className="bg-primary-50">
+      <section className="bg-bone">
         <div className="container">
           <div className="text-center mb-14">
             <h2 className="mb-4">How Ordering Works</h2>
-            <p className="text-xl text-gray-600">
+            <p className="text-xl text-ink/70">
               A few simple policies that keep quality high and delivery on time.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Lead time */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200">
-              <Calendar className="text-primary-500 mb-4" size={32} />
+            <div className="bg-ivory rounded-sm p-8 border border-ink/10">
+              <Calendar className="text-accent mb-4" size={32} />
               <h3 className="text-lg font-bold mb-3">One Month Lead Time</h3>
-              <p className="text-gray-600">
+              <p className="text-ink/70">
                 Please submit your order at least <strong>one month in advance</strong>. This
                 ensures adequate production scheduling and the high-quality result your garment
                 deserves.
@@ -142,37 +142,37 @@ export default function OrderInquiry() {
             </div>
 
             {/* Rush fees */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200">
+            <div className="bg-ivory rounded-sm p-8 border border-ink/10">
               <AlertTriangle className="text-amber-500 mb-4" size={32} />
               <h3 className="text-lg font-bold mb-3">Rush Fees</h3>
-              <p className="text-gray-600">
+              <p className="text-ink/70">
                 Orders placed with less than a month&apos;s notice incur a rush fee of{' '}
                 <strong>₦40,000 to ₦150,000</strong>, depending on complexity and timeline.
               </p>
-              <p className="text-sm text-gray-500 mt-2">
+              <p className="text-sm text-ink/55 mt-2">
                 Diaspora orders: <strong>$50 – $200</strong>.
               </p>
             </div>
 
             {/* Consultation */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200">
-              <MessageSquare className="text-primary-500 mb-4" size={32} />
+            <div className="bg-ivory rounded-sm p-8 border border-ink/10">
+              <MessageSquare className="text-accent mb-4" size={32} />
               <h3 className="text-lg font-bold mb-3">₦25,000 Consultation Fee</h3>
-              <p className="text-gray-600">
+              <p className="text-ink/70">
                 A <strong>₦25,000 consultation</strong> unlocks a detailed one-on-one session with
                 the designer — especially recommended for complex or extravagant garments, to refine
                 your vision and prevent misunderstandings.
               </p>
-              <p className="text-sm text-gray-500 mt-2">
+              <p className="text-sm text-ink/55 mt-2">
                 Diaspora clients: <strong>$50</strong>.
               </p>
             </div>
 
             {/* Fabric */}
-            <div className="bg-white rounded-xl p-8 border border-gray-200">
-              <Layers className="text-primary-500 mb-4" size={32} />
+            <div className="bg-ivory rounded-sm p-8 border border-ink/10">
+              <Layers className="text-accent mb-4" size={32} />
               <h3 className="text-lg font-bold mb-3">Your Fabric or Ours</h3>
-              <p className="text-gray-600">
+              <p className="text-ink/70">
                 You may <strong>supply your own fabric</strong> or choose from fabrics provided by
                 Lety Antony. An <strong>additional cost</strong> applies when using designer-provided
                 fabric.
@@ -181,12 +181,12 @@ export default function OrderInquiry() {
           </div>
 
           {/* Photo tip */}
-          <div className="max-w-5xl mx-auto mt-8 bg-white rounded-xl p-8 border border-primary-200">
+          <div className="max-w-5xl mx-auto mt-8 bg-ivory rounded-sm p-8 border border-accent/40">
             <div className="flex items-start gap-4">
               <Camera className="text-accent flex-shrink-0" size={28} />
               <div>
                 <h3 className="text-lg font-bold mb-2">Send Photos of Your Idea</h3>
-                <p className="text-gray-600">
+                <p className="text-ink/70">
                   Visual references dramatically improve design accuracy. Please attach photos of
                   outfits that match the look you&apos;re going for when you email us — it helps the
                   designer understand your vision and get the final garment just right.
@@ -198,24 +198,24 @@ export default function OrderInquiry() {
       </section>
 
       {/* Inquiry Form */}
-      <section id="inquiry-form" className="bg-white">
+      <section id="inquiry-form" className="bg-ivory">
         <div className="container max-w-3xl">
           <div className="text-center mb-12">
             <h2 className="mb-4">Start Your Inquiry</h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-ink/70">
               Fill in the details below. Submitting opens your email client with everything
               pre-filled — just attach your reference photos and hit send.
             </p>
           </div>
 
           {submitted && (
-            <div className="mb-8 bg-accent/10 border border-accent/30 rounded-xl p-6 flex items-start gap-3">
+            <div className="mb-8 bg-accent/10 border border-accent/30 rounded-sm p-6 flex items-start gap-3">
               <CheckCircle className="text-accent flex-shrink-0 mt-0.5" size={22} />
-              <p className="text-gray-700">
+              <p className="text-ink/80">
                 Your email draft has been opened. Don&apos;t forget to{' '}
                 <strong>attach photos</strong> of your outfit ideas before sending. If nothing
                 opened, email us directly at{' '}
-                <a href={`mailto:${BUSINESS_EMAIL}`} className="text-primary-500 font-semibold underline">
+                <a href={`mailto:${BUSINESS_EMAIL}`} className="text-accent font-semibold underline">
                   {BUSINESS_EMAIL}
                 </a>
                 .
@@ -223,10 +223,10 @@ export default function OrderInquiry() {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="bg-gray-50 rounded-xl p-8 space-y-6">
+          <form onSubmit={handleSubmit} className="bg-bone rounded-sm p-8 space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold text-ink/80 mb-2">
                   Full Name *
                 </label>
                 <input
@@ -236,12 +236,12 @@ export default function OrderInquiry() {
                   required
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-ink/15 rounded-lg focus:outline-none focus:border-accent"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold text-ink/80 mb-2">
                   Email *
                 </label>
                 <input
@@ -251,7 +251,7 @@ export default function OrderInquiry() {
                   required
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-ink/15 rounded-lg focus:outline-none focus:border-accent"
                   placeholder="you@example.com"
                 />
               </div>
@@ -259,7 +259,7 @@ export default function OrderInquiry() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="phone" className="block text-sm font-semibold text-ink/80 mb-2">
                   Phone / WhatsApp
                 </label>
                 <input
@@ -268,12 +268,12 @@ export default function OrderInquiry() {
                   type="tel"
                   value={form.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-ink/15 rounded-lg focus:outline-none focus:border-accent"
                   placeholder="+234 ..."
                 />
               </div>
               <div>
-                <label htmlFor="eventDate" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="eventDate" className="block text-sm font-semibold text-ink/80 mb-2">
                   Event Date / Deadline
                 </label>
                 <input
@@ -282,14 +282,14 @@ export default function OrderInquiry() {
                   type="date"
                   value={form.eventDate}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-ink/15 rounded-lg focus:outline-none focus:border-accent"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="service" className="block text-sm font-semibold text-ink/80 mb-2">
                   Service
                 </label>
                 <select
@@ -297,7 +297,7 @@ export default function OrderInquiry() {
                   name="service"
                   value={form.service}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-ink/15 rounded-lg bg-ivory focus:outline-none focus:border-accent"
                 >
                   <option>Custom-Made Clothing</option>
                   <option>Personal Consultation</option>
@@ -308,7 +308,7 @@ export default function OrderInquiry() {
                 </select>
               </div>
               <div>
-                <label htmlFor="fabric" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="fabric" className="block text-sm font-semibold text-ink/80 mb-2">
                   Fabric
                 </label>
                 <select
@@ -316,7 +316,7 @@ export default function OrderInquiry() {
                   name="fabric"
                   value={form.fabric}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-primary-500"
+                  className="w-full px-4 py-3 border border-ink/15 rounded-lg bg-ivory focus:outline-none focus:border-accent"
                 >
                   <option>I will supply my own fabric</option>
                   <option>Use Lety Antony fabric (additional cost)</option>
@@ -326,7 +326,7 @@ export default function OrderInquiry() {
             </div>
 
             <div>
-              <label htmlFor="description" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="description" className="block text-sm font-semibold text-ink/80 mb-2">
                 Describe Your Vision *
               </label>
               <textarea
@@ -336,12 +336,12 @@ export default function OrderInquiry() {
                 rows={5}
                 value={form.description}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="w-full px-4 py-3 border border-ink/15 rounded-lg focus:outline-none focus:border-accent"
                 placeholder="Tell us about the outfit — occasion, style, colours, fit preference, any details that matter to you."
               />
             </div>
 
-            <div className="flex items-start gap-2 text-sm text-gray-500">
+            <div className="flex items-start gap-2 text-sm text-ink/55">
               <Camera size={18} className="flex-shrink-0 mt-0.5" />
               <span>
                 Tip: after submitting, attach photos of outfits that match your idea to your email.
@@ -356,10 +356,10 @@ export default function OrderInquiry() {
 
           {/* Direct email */}
           <div className="text-center mt-10">
-            <p className="text-gray-600 mb-2">Prefer to email us directly?</p>
+            <p className="text-ink/70 mb-2">Prefer to email us directly?</p>
             <a
               href={`mailto:${BUSINESS_EMAIL}`}
-              className="inline-flex items-center gap-2 text-primary-500 font-semibold hover:text-primary-600 transition-colors"
+              className="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary-600 transition-colors"
             >
               <Mail size={18} />
               {BUSINESS_EMAIL}

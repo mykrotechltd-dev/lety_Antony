@@ -13,41 +13,82 @@ html {
 }
 
 body {
-  background-color: #ffffff;
-  color: #1f2937;
+  background-color: #faf7f1;
+  color: #211b16;
+  font-family: var(--font-body), system-ui, sans-serif;
 }
 
-/* Typography */
+/* ---------- Typography ---------- */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), Georgia, serif;
+  color: #211b16;
+  text-wrap: balance;
+}
+
 h1 {
-  @apply text-4xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight;
+  @apply text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.02];
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  @apply text-3xl md:text-4xl font-serif font-bold;
+  @apply text-4xl md:text-5xl font-medium leading-[1.08];
+  letter-spacing: -0.015em;
 }
 
 h3 {
-  @apply text-2xl md:text-3xl font-serif font-semibold;
+  @apply text-2xl md:text-3xl font-medium;
+  letter-spacing: -0.01em;
 }
 
 p {
-  @apply text-lg leading-relaxed;
+  @apply text-base md:text-lg leading-relaxed;
+  text-wrap: pretty;
 }
 
-/* Buttons */
+/* Couture eyebrow — used sparingly, as a deliberate brand device */
+.eyebrow {
+  font-family: var(--font-body), sans-serif;
+  @apply text-xs font-medium uppercase text-accent;
+  letter-spacing: 0.22em;
+}
+
+/* Editorial emphasis inside headings — italic Didone in gold */
+.accent-serif {
+  font-style: italic;
+  color: #b0894e;
+  font-weight: 500;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary,
+.btn-secondary,
+.btn-accent,
+.btn-ghost {
+  @apply inline-flex items-center justify-center gap-2 px-8 py-4 text-xs font-semibold uppercase rounded-sm transition-all duration-300 cursor-pointer;
+  letter-spacing: 0.18em;
+}
+
 .btn-primary {
-  @apply px-8 py-4 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-600 transition-colors duration-200 cursor-pointer;
+  @apply bg-primary-500 text-ivory hover:bg-primary-600;
 }
 
 .btn-secondary {
-  @apply px-8 py-4 bg-white border-2 border-primary-500 text-primary-500 font-semibold rounded-lg hover:bg-primary-50 transition-colors duration-200 cursor-pointer;
+  @apply bg-transparent border border-ink/30 text-ink hover:border-ink hover:bg-ink hover:text-ivory;
 }
 
 .btn-accent {
-  @apply px-8 py-4 bg-accent text-white font-semibold rounded-lg hover:bg-green-600 transition-colors duration-200 cursor-pointer;
+  @apply bg-accent text-ink hover:bg-gold-deep hover:text-ivory;
 }
 
-/* Sections */
+/* Ghost button for dark grounds */
+.btn-ghost {
+  @apply bg-transparent border border-ivory/40 text-ivory hover:border-accent hover:text-accent;
+}
+
+/* ---------- Layout primitives ---------- */
 section {
   @apply py-20 md:py-28;
 }
@@ -56,58 +97,30 @@ section {
   @apply max-w-7xl mx-auto px-6 md:px-8;
 }
 
-/* Card Styles */
+/* Hairline rule */
+.rule {
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(176, 137, 78, 0.6), transparent);
+}
+
+/* Editorial card — hairline, no heavy shadow, sharp corners */
 .card {
-  @apply bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow duration-300;
+  @apply bg-ivory border border-ink/10 rounded-none p-8 transition-colors duration-300;
 }
 
-/* Gradient accent */
-.gradient-text {
-  background: linear-gradient(135deg, #0f3a2f 0%, #14a38f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.card:hover {
+  @apply border-accent/60;
 }
 
-/* Timeline */
-.timeline {
-  position: relative;
+/* ---------- Motion ---------- */
+.animate-rise {
+  animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 100%;
-  background: linear-gradient(to bottom, #0f3a2f, #14a38f, transparent);
-}
-
-.timeline-item {
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  width: 16px;
-  height: 16px;
-  background: #0f3a2f;
-  border: 3px solid white;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px #14a38f;
-}
-
-/* Animations */
-@keyframes fadeInUp {
+@keyframes rise {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -115,33 +128,23 @@ section {
   }
 }
 
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
 
-/* Responsive */
+/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-  h1 {
-    @apply text-3xl;
-  }
-
-  h2 {
-    @apply text-2xl;
-  }
-
-  h3 {
-    @apply text-xl;
-  }
-
   section {
-    @apply py-12;
-  }
-
-  .timeline::before {
-    left: 0;
-  }
-
-  .timeline-item::before {
-    left: 0;
+    @apply py-14;
   }
 }

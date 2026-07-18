@@ -1,210 +1,216 @@
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { CheckCircle, Zap, Eye, Truck, Sparkles, Clock, Users, Award, MapPin, Phone, Mail } from 'lucide-react'
+import {
+  Eye,
+  MessageCircle,
+  MapPin,
+  Phone,
+  Mail,
+  ArrowRight,
+} from 'lucide-react'
+
+const WHATSAPP = 'https://wa.me/2340000000000'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-ivory">
       <Header />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-b from-primary-50 to-white">
+      {/* ---------- Hero ---------- */}
+      <section className="relative bg-ink text-ivory pt-36 pb-20 md:pt-40 md:pb-28 overflow-hidden">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="mb-6">
-                Your Style, Your Fabric, <span className="gradient-text">Seven Days</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            <div className="lg:col-span-6 animate-rise">
+              <p className="eyebrow mb-6">Bespoke Nigerian Couture · Abuja</p>
+              <h1 className="text-ivory mb-8">
+                Your style, your fabric,<br />
+                <span className="accent-serif">seven working days.</span>
               </h1>
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Custom fashion that doesn't compromise on quality or timeline. We combine AI visualization with master craftsmanship to deliver your dream outfit on time, every time.
+              <p className="text-ivory/75 max-w-xl mb-10">
+                Hand-finished garments made to your measure — visualised before a single cut,
+                tracked at every stage, and delivered when we say. Craftsmanship with certainty.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/order-inquiry" className="btn-primary text-center">Start Your Order</Link>
-                <Link href="#services" className="btn-secondary text-center">Learn More</Link>
+                <Link href="/order-inquiry" className="btn-accent">
+                  Begin a Commission
+                </Link>
+                <a
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost"
+                >
+                  <MessageCircle size={16} />
+                  Chat on WhatsApp
+                </a>
               </div>
-              <div className="mt-12 grid grid-cols-3 gap-8 text-center">
-                <div>
-                  <p className="text-3xl font-bold text-primary-500">7</p>
-                  <p className="text-sm text-gray-600">Working Days</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-primary-500">100%</p>
-                  <p className="text-sm text-gray-600">Custom Made</p>
-                </div>
-                <div>
-                  <p className="text-3xl font-bold text-primary-500">Real-Time</p>
-                  <p className="text-sm text-gray-600">Tracking</p>
-                </div>
-              </div>
+
+              {/* Editorial stat row — hairline-divided, not the SaaS metric template */}
+              <dl className="mt-14 flex flex-wrap gap-x-10 gap-y-6 border-t border-ivory/15 pt-8">
+                {[
+                  { k: 'VII', l: 'Working days, guaranteed' },
+                  { k: '100%', l: 'Made to measure' },
+                  { k: 'Live', l: 'Production tracking' },
+                ].map((s) => (
+                  <div key={s.l} className="flex items-baseline gap-3">
+                    <dt className="font-display text-3xl text-gold-light leading-none">{s.k}</dt>
+                    <dd className="text-xs uppercase tracking-luxe text-ivory/60 max-w-[7rem]">
+                      {s.l}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
             </div>
-            <div className="relative rounded-2xl h-96 lg:h-[540px] overflow-hidden shadow-2xl">
-              <img
-                src="/designs/design4.jpeg"
-                alt="Navy beaded evening gown with satin cape, handcrafted by Lety Antony"
-                className="w-full h-full object-cover object-top"
-              />
-              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg">
-                <p className="text-sm font-semibold text-primary-900">Handcrafted Couture</p>
-                <p className="text-xs text-gray-600">Beaded cape gown · Lety Antony</p>
+
+            <div className="lg:col-span-6">
+              <div className="relative h-[26rem] md:h-[34rem] lg:h-[40rem] overflow-hidden">
+                <img
+                  src="/designs/design4.jpeg"
+                  alt="Navy beaded evening gown with satin cape, hand-finished at the Lety Antony atelier"
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-ink/70 to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <p className="eyebrow text-gold-light mb-1">Signature</p>
+                  <p className="font-display text-lg text-ivory">The Beaded Cape Gown</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="bg-white">
+      {/* ---------- Services (atelier index) ---------- */}
+      <section id="services" className="bg-ivory">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="mb-4">What We Offer</h2>
-            <p className="text-xl text-gray-600">Comprehensive custom fashion services tailored to your needs</p>
+          <div className="max-w-2xl mb-16">
+            <p className="eyebrow mb-4">The House</p>
+            <h2 className="mb-5">A full service, end to end</h2>
+            <p className="text-ink/70">
+              From fabric to finished garment, everything happens under one roof — so nothing gets
+              lost between hands.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-ink/10">
             {[
-              {
-                icon: Zap,
-                title: '7-Day Production',
-                desc: 'Your custom garment, delivered within seven working days. Guaranteed.'
-              },
-              {
-                icon: Eye,
-                title: 'AI Visualization',
-                desc: 'See your finished outfit before a single cut is made. Approve with confidence.'
-              },
-              {
-                icon: Truck,
-                title: 'Real-Time Tracking',
-                desc: 'WhatsApp & SMS updates at every stage. Know exactly where your garment is.'
-              },
-              {
-                icon: Users,
-                title: 'Corporate Solutions',
-                desc: 'Bulk orders, uniform production, and branded wear for organizations.'
-              },
-              {
-                icon: Award,
-                title: 'Premium Quality',
-                desc: 'Every piece passes our documented QC checklist before delivery.'
-              },
-              {
-                icon: Sparkles,
-                title: 'Styling Consultancy',
-                desc: 'Expert advice on fabrics, colors, and styles that work for you.'
-              },
-            ].map((service, idx) => {
-              const Icon = service.icon
-              return (
-                <div key={idx} className="card">
-                  <Icon className="text-primary-500 mb-4" size={32} />
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-600">{service.desc}</p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section id="process" className="bg-primary-50">
-        <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="mb-4">The 7-Day Production Pipeline</h2>
-            <p className="text-xl text-gray-600">From concept to collection, tracked every step</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4 mb-12">
-            {[
-              { day: 'Day 0', stage: 'Order Intake', desc: 'Measurements captured' },
-              { day: 'Day 1', stage: 'Fabric Check', desc: 'Inspection & patterns' },
-              { day: 'Day 2', stage: 'Cutting', desc: 'Precision cutting' },
-              { day: 'Days 3-5', stage: 'Sewing', desc: 'Assembly & construction' },
-              { day: 'Day 6', stage: 'Finishing', desc: 'Hems, buttons, details' },
-              { day: 'Day 7 AM', stage: 'Quality Check', desc: 'Final inspection' },
-              { day: 'Day 7 PM', stage: 'Ready', desc: 'Ready for collection' },
-            ].map((item, idx) => (
-              <div key={idx} className="text-center">
-                <div className="bg-primary-500 text-white rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3 font-bold">
-                  {idx + 1}
-                </div>
-                <p className="text-sm font-semibold text-primary-600">{item.day}</p>
-                <h4 className="font-bold text-sm my-2">{item.stage}</h4>
-                <p className="text-xs text-gray-600">{item.desc}</p>
+              { n: '01', title: '7-Day Production', desc: 'Your custom garment, made and delivered within seven working days. Guaranteed in writing.' },
+              { n: '02', title: 'AI Visualisation', desc: 'See your finished outfit rendered on your proportions before a single cut is made.' },
+              { n: '03', title: 'Real-Time Tracking', desc: 'WhatsApp and SMS updates at every stage. You always know where your garment is.' },
+              { n: '04', title: 'Aso-Ebi & Groups', desc: 'Coordinated bulk production for weddings and events, delivered on a hard deadline.' },
+              { n: '05', title: 'Corporate & Uniforms', desc: 'Branded workwear and uniforms produced in volume, to a documented standard.' },
+              { n: '06', title: 'Styling Consultancy', desc: 'Personal sessions on silhouette, fabric and colour — matched to occasion and body.' },
+            ].map((s) => (
+              <div
+                key={s.n}
+                className="group border-r border-b border-ink/10 p-8 md:p-10 transition-colors duration-300 hover:bg-bone"
+              >
+                <span className="font-display text-2xl text-accent">{s.n}</span>
+                <h3 className="mt-5 mb-3">{s.title}</h3>
+                <p className="text-ink/70 text-base">{s.desc}</p>
               </div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <div className="bg-white rounded-xl p-8 border border-primary-200">
-            <div className="flex items-start gap-4">
-              <CheckCircle className="text-accent flex-shrink-0" size={24} />
-              <div>
-                <h3 className="font-bold mb-2">The Process Tracker Guarantee</h3>
-                <p className="text-gray-600">
-                  Every client receives automated WhatsApp & SMS notifications at each stage. You'll always know exactly where your garment is in production. No chasing. No surprises.
-                </p>
-              </div>
-            </div>
+      {/* ---------- Process ---------- */}
+      <section id="process" className="bg-bone">
+        <div className="container">
+          <div className="max-w-2xl mb-16">
+            <p className="eyebrow mb-4">The Process</p>
+            <h2 className="mb-5">Seven days, one clear line</h2>
+            <p className="text-ink/70">
+              Every order moves through the same disciplined pipeline — with a notification the
+              moment each stage is done.
+            </p>
+          </div>
+
+          <ol className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-y-10 gap-x-4">
+            {[
+              { day: 'Day 0', stage: 'Order Intake', desc: 'Measurements & design lock' },
+              { day: 'Day 1', stage: 'Fabric & Pattern', desc: 'Inspection, drafting' },
+              { day: 'Day 2', stage: 'Cutting', desc: 'Precision cutting' },
+              { day: 'Days 3–5', stage: 'Sewing', desc: 'Assembly & construction' },
+              { day: 'Day 6', stage: 'Finishing', desc: 'Hems, beads, details' },
+              { day: 'Day 7 AM', stage: 'Quality Control', desc: 'Checked against your render' },
+              { day: 'Day 7 PM', stage: 'Ready', desc: 'Ready for collection' },
+            ].map((item, idx) => (
+              <li key={idx} className="relative pt-6">
+                <span className="absolute top-0 left-0 right-0 h-px bg-ink/15" />
+                <span className="absolute top-0 left-0 h-px w-8 bg-accent" />
+                <span className="font-display text-xl text-accent">{idx + 1}</span>
+                <p className="mt-3 text-[0.7rem] uppercase tracking-luxe text-ink/50">{item.day}</p>
+                <h4 className="mt-1 mb-1 text-base font-display">{item.stage}</h4>
+                <p className="text-sm text-ink/65">{item.desc}</p>
+              </li>
+            ))}
+          </ol>
+
+          <div className="mt-16 flex items-start gap-4 border border-ink/10 bg-ivory p-8">
+            <MessageCircle className="text-accent flex-shrink-0 mt-1" size={22} />
+            <p className="text-ink/75">
+              <span className="font-display text-lg text-ink">The tracker is the product.</span>{' '}
+              Automated WhatsApp &amp; SMS notifications land at every stage transition — no chasing,
+              no silence, no surprises on collection day.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* AI Visualization Section */}
-      <section className="bg-white">
+      {/* ---------- AI Visualisation ---------- */}
+      <section className="bg-ivory">
         <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="relative rounded-2xl h-96 lg:h-[520px] overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative h-[26rem] lg:h-[34rem] overflow-hidden order-2 lg:order-1">
               <img
                 src="/designs/design1.jpeg"
-                alt="Navy beaded mermaid gown detailing by Lety Antony"
+                alt="Hand-beaded navy mermaid gown — bodice detail from the Lety Antony atelier"
                 className="w-full h-full object-cover object-top"
               />
             </div>
-            <div>
-              <h2 className="mb-6">See It Before We Sew It</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                The biggest source of disappointment in custom tailoring is the gap between what you imagined and what you received. We close that gap with AI.
+            <div className="order-1 lg:order-2">
+              <p className="eyebrow mb-4">Design Certainty</p>
+              <h2 className="mb-6">See it before we sew it</h2>
+              <p className="text-ink/70 mb-8">
+                The biggest source of disappointment in custom tailoring is the gap between what you
+                imagined and what you received. We close it — the approved render becomes the contract.
               </p>
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-5 mb-10">
                 {[
-                  'AI generates a photorealistic preview of your finished garment',
-                  'Rendered on a model matching YOUR body proportions',
-                  'In YOUR actual fabric, captured with precision',
-                  'Up to 2 revision rounds before production starts',
-                  'Approved render becomes the production contract'
+                  'A photorealistic preview of your finished garment',
+                  'Rendered on a model matching your own proportions',
+                  'In your actual fabric, captured with precision',
+                  'Up to two revision rounds before production begins',
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle className="text-accent flex-shrink-0 mt-1" size={20} />
-                    <span className="text-gray-700">{item}</span>
+                  <li key={idx} className="flex items-start gap-4">
+                    <Eye className="text-accent flex-shrink-0 mt-1" size={18} />
+                    <span className="text-ink/80">{item}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-sm text-gray-500 italic">
-                "What you approve is what you collect. This is our contract."
+              <p className="font-display text-xl italic text-ink">
+                “What you approve is what you collect.”
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Design Showcase / Atelier */}
-      <section id="gallery" className="bg-white">
+      {/* ---------- Atelier gallery (dark ground) ---------- */}
+      <section id="gallery" className="bg-ink text-ivory">
         <div className="container">
-          <div className="text-center mb-14">
-            <p className="text-sm font-semibold tracking-widest text-primary-500 uppercase mb-3">
-              The Atelier
-            </p>
-            <h2 className="mb-4">Recent Designs</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              A glimpse of our couture craftsmanship — hand-beaded bodices, structured tailoring,
-              and finish worthy of every occasion.
+          <div className="max-w-2xl mb-14">
+            <p className="eyebrow mb-4">The Atelier</p>
+            <h2 className="text-ivory mb-5">Recent work</h2>
+            <p className="text-ivory/70">
+              Hand-beaded bodices, structured tailoring, and a finish worthy of the occasion.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Featured video */}
-            <div className="relative rounded-xl overflow-hidden shadow-md aspect-[3/4] sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:aspect-auto bg-black">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="relative overflow-hidden aspect-[3/4] sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:aspect-auto bg-black">
               <video
                 className="w-full h-full object-cover"
                 controls
@@ -216,237 +222,228 @@ export default function Home() {
                 <source src="/designs/design3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
-              <div className="absolute top-4 left-4 bg-primary-900/80 backdrop-blur px-3 py-1.5 rounded-lg">
-                <p className="text-xs font-semibold text-white uppercase tracking-wide">In Motion</p>
+              <div className="absolute top-4 left-4 bg-ink/70 backdrop-blur px-3 py-1.5">
+                <p className="eyebrow text-gold-light">In Motion</p>
               </div>
             </div>
 
             {[
-              { src: '/designs/design1.jpeg', alt: 'Navy beaded strapless mermaid gown by Lety Antony', label: 'Beaded Mermaid Gown' },
-              { src: '/designs/design2.jpeg', alt: 'Wine lace-sleeve beaded evening gown by Lety Antony', label: 'Wine Lace Evening Gown' },
-              { src: '/designs/design6.png', alt: 'Navy cape gown neckline detail by Lety Antony', label: 'Cape Gown — Neckline Detail' },
-              { src: '/designs/design4.jpeg', alt: 'Navy beaded gown with satin cape by Lety Antony', label: 'Beaded Cape Gown' },
+              { src: '/designs/design1.jpeg', alt: 'Navy beaded strapless mermaid gown', label: 'Beaded Mermaid Gown' },
+              { src: '/designs/design2.jpeg', alt: 'Wine lace-sleeve beaded evening gown', label: 'Wine Lace Evening Gown' },
+              { src: '/designs/design6.png', alt: 'Navy cape gown neckline detail', label: 'Cape Gown — Detail' },
+              { src: '/designs/design4.jpeg', alt: 'Navy beaded gown with satin cape', label: 'Beaded Cape Gown' },
             ].map((item, i) => (
-              <div key={i} className="group relative rounded-xl overflow-hidden shadow-md aspect-[3/4]">
+              <div key={i} className="group relative overflow-hidden aspect-[3/4]">
                 <img
                   src={item.src}
                   alt={item.alt}
                   loading="lazy"
-                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 ease-out-expo group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-sm font-semibold text-white">{item.label}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/0 to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <p className="font-display text-base text-ivory">{item.label}</p>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/order-inquiry" className="btn-primary">
+          <div className="mt-14">
+            <Link href="/order-inquiry" className="btn-accent">
               Commission Your Piece
+              <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section id="why" className="bg-primary-50">
+      {/* ---------- Why ---------- */}
+      <section id="why" className="bg-ivory">
         <div className="container">
-          <h2 className="text-center mb-16">Why Lety Antony</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: 'Certainty in Uncertain Times',
-                desc: 'In a market known for tailor disappointment, we deliver. Your 7-day promise is backed by a documented production pipeline and on-time delivery bonus structure.'
-              },
-              {
-                title: 'Technology That Works',
-                desc: 'Real-time tracking isn\'t a luxury—it\'s how you should buy custom fashion. WhatsApp & SMS updates at every stage, plus an AI visualization that catches design issues before they happen.'
-              },
-              {
-                title: 'Craftsmanship at Scale',
-                desc: 'Master tailors + industrialized workflow. Every garment passes our QC checklist against your approved design before we send the "Ready for Collection" message.'
-              },
-              {
-                title: 'One-Stop Experience',
-                desc: 'Partner-stocked fabric showroom means you touch real materials, see them AI-rendered on your proportions, and start production immediately. No market runs.'
-              },
-              {
-                title: 'For Time-Poor Professionals',
-                desc: 'You can\'t afford a tailor who disappoints. We charge a premium (20-40% above average) because we deliver what we promise. Certainty has a price.'
-              },
-              {
-                title: 'Diaspora-Ready',
-                desc: 'Remote clients can co-design and approve outfits entirely online with AI visualization and body-measurement from photos. Delivery via trusted courier partners.'
-              },
-            ].map((item, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-8 border border-gray-200">
-                <h3 className="font-bold mb-3 text-lg">{item.title}</h3>
-                <p className="text-gray-600">{item.desc}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div className="lg:col-span-4">
+              <p className="eyebrow mb-4">Why the House</p>
+              <h2 className="mb-5">Talent is common.<br />Reliability is rare.</h2>
+              <p className="text-ink/70">
+                We built the house on the one thing the market cannot promise: your garment, done
+                right, on the day.
+              </p>
+            </div>
+
+            <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 border-t border-l border-ink/10">
+              {[
+                { title: 'Certainty, in writing', desc: 'A documented pipeline and an on-time delivery guarantee stand behind every seven-day promise.' },
+                { title: 'Technology that serves craft', desc: 'Live tracking and pre-production visualisation catch problems before they reach your wardrobe.' },
+                { title: 'Craftsmanship at scale', desc: 'Master tailors and a disciplined workflow — every garment QC-checked against your approved design.' },
+                { title: 'One-stop atelier', desc: 'A partner-stocked fabric showroom means you touch materials and start production the same day.' },
+                { title: 'For the time-poor', desc: 'You cannot afford a tailor who disappoints. You pay a premium for certainty — and receive it.' },
+                { title: 'Diaspora-ready', desc: 'Co-design and approve entirely online, with delivery through trusted courier partners.' },
+              ].map((item, idx) => (
+                <div key={idx} className="border-r border-b border-ink/10 p-8 hover:bg-bone transition-colors duration-300">
+                  <h3 className="text-xl mb-3">{item.title}</h3>
+                  <p className="text-ink/70 text-base">{item.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="bg-white">
+      {/* ---------- Pricing ---------- */}
+      <section className="bg-bone">
         <div className="container">
-          <div className="text-center mb-16">
-            <h2 className="mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-600">Value-based pricing. You pay for certainty, not just sewing.</p>
+          <div className="max-w-2xl mb-16">
+            <p className="eyebrow mb-4">Investment</p>
+            <h2 className="mb-5">You pay for certainty, not just sewing</h2>
+            <p className="text-ink/70">
+              Value-based pricing, priced by the complexity of the piece. Every commission includes
+              visualisation, tracking, and the seven-day guarantee.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-ink/10 border border-ink/10">
             {[
-              {
-                tier: 'Tier 1 - Simple',
-                examples: 'Shirts, skirts, simple gowns',
-                price: 'From ₦25,000',
-              },
-              {
-                tier: 'Tier 2 - Standard',
-                examples: 'Senator wear, agbada, corporate dresses',
-                price: 'From ₦35,000',
-                featured: true,
-              },
-              {
-                tier: 'Tier 3 - Complex',
-                examples: 'Beaded gowns, structured jackets, bridal',
-                price: 'From ₦50,000',
-              },
+              { tier: 'Tier I — Simple', examples: 'Shirts, skirts, simple gowns', price: '₦25,000' },
+              { tier: 'Tier II — Standard', examples: 'Senator wear, agbada, corporate dresses', price: '₦35,000', featured: true },
+              { tier: 'Tier III — Complex', examples: 'Beaded gowns, structured jackets, bridal', price: '₦50,000' },
             ].map((tier, idx) => (
               <div
                 key={idx}
-                className={`rounded-xl p-8 ${
-                  tier.featured
-                    ? 'bg-primary-500 text-white border-2 border-primary-500 transform scale-105'
-                    : 'bg-gray-50 border border-gray-200'
-                }`}
+                className={`p-10 flex flex-col ${tier.featured ? 'bg-ink text-ivory' : 'bg-ivory'}`}
               >
-                <h3 className={`font-bold text-xl mb-2 ${tier.featured ? 'text-white' : 'text-gray-900'}`}>
+                <p className={`text-xs uppercase tracking-luxe mb-6 ${tier.featured ? 'text-gold-light' : 'text-accent'}`}>
                   {tier.tier}
-                </h3>
-                <p className={`text-sm mb-6 ${tier.featured ? 'text-primary-100' : 'text-gray-600'}`}>
+                </p>
+                <p className={`text-sm mb-8 ${tier.featured ? 'text-ivory/70' : 'text-ink/65'}`}>
                   {tier.examples}
                 </p>
-                <p className={`text-3xl font-bold mb-6 ${tier.featured ? 'text-white' : 'text-primary-500'}`}>
-                  {tier.price}
-                </p>
-                <button className={tier.featured ? 'btn-accent w-full' : 'btn-secondary w-full'}>
-                  Book Now
-                </button>
+                <div className="mt-auto">
+                  <p className={`text-xs uppercase tracking-luxe mb-1 ${tier.featured ? 'text-ivory/50' : 'text-ink/45'}`}>
+                    From
+                  </p>
+                  <p className="font-display text-4xl mb-8">{tier.price}</p>
+                  <Link
+                    href="/order-inquiry"
+                    className={tier.featured ? 'btn-accent w-full' : 'btn-secondary w-full'}
+                  >
+                    Book Now
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-12 bg-accent/10 rounded-xl p-8 text-center">
-            <p className="text-gray-700 mb-4">
-              <span className="font-bold">Express Service (48-72 hours)</span> available at +50-100% surcharge
-            </p>
-            <p className="text-sm text-gray-600">
-              All prices include AI visualization, real-time tracking, and our 7-day delivery guarantee
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Markets */}
-      <section className="bg-primary-50">
-        <div className="container">
-          <h2 className="text-center mb-16">Who We Serve</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                title: 'Busy Professionals',
-                desc: 'Ages 25-50, mid-to-high income. You value reliability and can\'t afford to chase tailors.',
-              },
-              {
-                title: 'Event Clients',
-                desc: 'Weddings, aso-ebi groups, birthdays. You need coordinated, on-time delivery for your event.',
-              },
-              {
-                title: 'Corporate Organizations',
-                desc: 'Banks, schools, hospitality. We produce branded uniforms and wear in volume.',
-              },
-              {
-                title: 'Diaspora Clients',
-                desc: 'Nigerians abroad ordering traditional wear. Order online, approve via AI, delivery via courier.',
-              },
-            ].map((market, idx) => (
-              <div key={idx} className="bg-white rounded-lg p-8 border border-gray-200">
-                <h3 className="font-bold text-lg mb-3">{market.title}</h3>
-                <p className="text-gray-600 text-sm">{market.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-primary-900 text-white py-20">
-        <div className="container text-center">
-          <h2 className="text-white mb-6">Ready to Experience the Difference?</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Your style, your fabric, seven working days. Tracked every step. Guaranteed.
+          <p className="mt-10 text-ink/70">
+            <span className="font-display text-lg text-ink">Express service</span> — 48–72 hour
+            turnaround available at a 50–100% surcharge. Diaspora pricing quoted in USD on request.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/order-inquiry" className="btn-accent px-10 py-4 text-lg text-center">
-              Start Your Order
-            </Link>
-            <Link href="/order-inquiry#inquiry-form" className="px-10 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors text-center">
-              Schedule a Consultation
-            </Link>
+        </div>
+      </section>
+
+      {/* ---------- Who we serve ---------- */}
+      <section className="bg-ivory">
+        <div className="container">
+          <div className="max-w-2xl mb-16">
+            <p className="eyebrow mb-4">Clientele</p>
+            <h2>Who we dress</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+            {[
+              { num: 'I', title: 'Busy Professionals', desc: 'Time-poor, mid-to-high income. You value reliability and cannot chase tailors.' },
+              { num: 'II', title: 'Event & Aso-Ebi', desc: 'Weddings, groups, celebrations — coordinated and delivered on a hard deadline.' },
+              { num: 'III', title: 'Corporate', desc: 'Banks, schools, hospitality — branded uniforms produced in volume.' },
+              { num: 'IV', title: 'Diaspora', desc: 'Order online, approve by render, receive by courier — from anywhere.' },
+            ].map((m, idx) => (
+              <div key={idx} className="border-t border-ink/15 pt-6">
+                <span className="font-display text-2xl text-accent">{m.num}</span>
+                <h3 className="text-xl mt-3 mb-3">{m.title}</h3>
+                <p className="text-ink/70 text-base">{m.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="bg-white">
-        <div className="container">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-center mb-4">Get In Touch</h2>
-            <p className="text-center text-gray-600 mb-12">
-              Questions? We're here to help. Reach out and let's discuss your custom fashion needs.
-            </p>
+      {/* ---------- CTA ---------- */}
+      <section className="bg-primary-900 text-ivory">
+        <div className="container text-center max-w-3xl">
+          <p className="eyebrow mb-6">Never be disappointed by a tailor again</p>
+          <h2 className="text-ivory mb-8">
+            Your next piece deserves <span className="accent-serif">certainty.</span>
+          </h2>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/order-inquiry" className="btn-accent">
+              Begin a Commission
+            </Link>
+            <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="btn-ghost">
+              <MessageCircle size={16} />
+              Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <MapPin className="text-primary-500 mx-auto mb-4" size={32} />
-                <h3 className="font-bold mb-2">Location</h3>
-                <p className="text-gray-600 text-sm">Abuja, FCT<br />Nigeria</p>
-              </div>
-              <div className="text-center">
-                <Phone className="text-primary-500 mx-auto mb-4" size={32} />
-                <h3 className="font-bold mb-2">Phone</h3>
-                <p className="text-gray-600 text-sm">+234 (0) XXX XXX XXXX</p>
-              </div>
-              <div className="text-center">
-                <Mail className="text-primary-500 mx-auto mb-4" size={32} />
-                <h3 className="font-bold mb-2">Email</h3>
-                <p className="text-gray-600 text-sm">hello@letyantonyfh.com</p>
-              </div>
+      {/* ---------- Contact ---------- */}
+      <section id="contact" className="bg-bone">
+        <div className="container">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+              <p className="eyebrow mb-4">Visit / Enquire</p>
+              <h2 className="mb-6">Get in touch</h2>
+              <p className="text-ink/70 mb-10 max-w-md">
+                Tell us about the occasion and the look you have in mind. We&apos;ll take it from there.
+              </p>
+              <ul className="space-y-6">
+                <li className="flex items-center gap-4">
+                  <MapPin className="text-accent flex-shrink-0" size={20} />
+                  <span className="text-ink/80">Abuja, Federal Capital Territory, Nigeria</span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <Phone className="text-accent flex-shrink-0" size={20} />
+                  <span className="text-ink/80">+234 (0) XXX XXX XXXX</span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <Mail className="text-accent flex-shrink-0" size={20} />
+                  <a href="mailto:hello@letyantonyfh.com" className="text-ink/80 hover:text-accent transition-colors">
+                    hello@letyantonyfh.com
+                  </a>
+                </li>
+                <li className="flex items-center gap-4">
+                  <MessageCircle className="text-accent flex-shrink-0" size={20} />
+                  <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-ink/80 hover:text-accent transition-colors">
+                    Message us on WhatsApp
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <form className="bg-gray-50 rounded-xl p-8">
+            <form className="bg-ivory border border-ink/10 p-8 md:p-10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500"
+                <div>
+                  <label htmlFor="c-name" className="block text-xs uppercase tracking-luxe text-ink/60 mb-2">Name</label>
+                  <input
+                    id="c-name"
+                    type="text"
+                    className="w-full px-4 py-3 bg-bone border border-ink/15 rounded-sm focus:outline-none focus:border-accent transition-colors"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="c-email" className="block text-xs uppercase tracking-luxe text-ink/60 mb-2">Email</label>
+                  <input
+                    id="c-email"
+                    type="email"
+                    className="w-full px-4 py-3 bg-bone border border-ink/15 rounded-sm focus:outline-none focus:border-accent transition-colors"
+                  />
+                </div>
+              </div>
+              <div className="mb-6">
+                <label htmlFor="c-msg" className="block text-xs uppercase tracking-luxe text-ink/60 mb-2">Your Vision</label>
+                <textarea
+                  id="c-msg"
+                  rows={5}
+                  className="w-full px-4 py-3 bg-bone border border-ink/15 rounded-sm focus:outline-none focus:border-accent transition-colors"
                 />
               </div>
-              <textarea
-                placeholder="Tell us about your custom fashion needs..."
-                rows={5}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 mb-6"
-              ></textarea>
               <button type="submit" className="btn-primary w-full">
                 Send Message
               </button>
