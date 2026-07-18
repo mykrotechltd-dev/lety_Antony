@@ -10,23 +10,25 @@ export default function Header() {
   return (
     <header className="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
       <div className="container flex justify-between items-center py-6">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">LA</span>
-          </div>
-          <span className="text-xl font-serif font-bold text-primary-900 hidden sm:inline">
-            Lety Antony
-          </span>
+        <Link href="/" className="flex items-center" aria-label="Lety Antony Fashion House — home">
+          <img
+            src="/letty_logo.png"
+            alt="Lety Antony Fashion Designer"
+            className="h-11 md:h-12 w-auto"
+          />
         </Link>
 
         <nav className="hidden md:flex gap-8 items-center">
-          <Link href="#services" className="text-gray-700 hover:text-primary-500 transition-colors">
+          <Link href="/#services" className="text-gray-700 hover:text-primary-500 transition-colors">
             Services
           </Link>
-          <Link href="#process" className="text-gray-700 hover:text-primary-500 transition-colors">
+          <Link href="/#process" className="text-gray-700 hover:text-primary-500 transition-colors">
             Our Process
           </Link>
-          <Link href="#why" className="text-gray-700 hover:text-primary-500 transition-colors">
+          <Link href="/#gallery" className="text-gray-700 hover:text-primary-500 transition-colors">
+            Designs
+          </Link>
+          <Link href="/#why" className="text-gray-700 hover:text-primary-500 transition-colors">
             Why Us
           </Link>
           <Link href="/order-inquiry" className="btn-primary text-sm">
@@ -47,21 +49,28 @@ export default function Header() {
         <nav className="md:hidden bg-white border-t border-gray-200 py-4">
           <div className="container flex flex-col gap-4">
             <Link
-              href="#services"
+              href="/#services"
               className="text-gray-700 hover:text-primary-500"
               onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
             <Link
-              href="#process"
+              href="/#process"
               className="text-gray-700 hover:text-primary-500"
               onClick={() => setIsOpen(false)}
             >
               Our Process
             </Link>
             <Link
-              href="#why"
+              href="/#gallery"
+              className="text-gray-700 hover:text-primary-500"
+              onClick={() => setIsOpen(false)}
+            >
+              Designs
+            </Link>
+            <Link
+              href="/#why"
               className="text-gray-700 hover:text-primary-500"
               onClick={() => setIsOpen(false)}
             >

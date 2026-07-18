@@ -30,3 +30,8 @@ yarn-error.log*
 .vscode
 *.swp
 *.swo
+
+# Source design assets (web-ready copies live in public/)
+/Letty_designs/
+/letty_logo.png
+/Letty_logo.png

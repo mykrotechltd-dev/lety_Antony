@@ -147,18 +147,24 @@ export default function OrderInquiry() {
               <h3 className="text-lg font-bold mb-3">Rush Fees</h3>
               <p className="text-gray-600">
                 Orders placed with less than a month&apos;s notice incur a rush fee of{' '}
-                <strong>$50 to $200</strong>, depending on complexity and timeline.
+                <strong>₦40,000 to ₦150,000</strong>, depending on complexity and timeline.
+              </p>
+              <p className="text-sm text-gray-500 mt-2">
+                Diaspora orders: <strong>$50 – $200</strong>.
               </p>
             </div>
 
             {/* Consultation */}
             <div className="bg-white rounded-xl p-8 border border-gray-200">
               <MessageSquare className="text-primary-500 mb-4" size={32} />
-              <h3 className="text-lg font-bold mb-3">$50 Consultation Fee</h3>
+              <h3 className="text-lg font-bold mb-3">₦25,000 Consultation Fee</h3>
               <p className="text-gray-600">
-                A <strong>$50 consultation</strong> unlocks a detailed one-on-one session with the
-                designer — especially recommended for complex or extravagant garments, to refine
+                A <strong>₦25,000 consultation</strong> unlocks a detailed one-on-one session with
+                the designer — especially recommended for complex or extravagant garments, to refine
                 your vision and prevent misunderstandings.
+              </p>
+              <p className="text-sm text-gray-500 mt-2">
+                Diaspora clients: <strong>$50</strong>.
               </p>
             </div>
 

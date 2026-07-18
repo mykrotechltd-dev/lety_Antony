@@ -38,10 +38,15 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-primary-100 rounded-2xl h-96 flex items-center justify-center">
-              <div className="text-center text-primary-300">
-                <Sparkles size={64} className="mx-auto mb-4" />
-                <p>Visual Showcase</p>
+            <div className="relative rounded-2xl h-96 lg:h-[540px] overflow-hidden shadow-2xl">
+              <img
+                src="/designs/design4.jpeg"
+                alt="Navy beaded evening gown with satin cape, handcrafted by Lety Antony"
+                className="w-full h-full object-cover object-top"
+              />
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg">
+                <p className="text-sm font-semibold text-primary-900">Handcrafted Couture</p>
+                <p className="text-xs text-gray-600">Beaded cape gown · Lety Antony</p>
               </div>
             </div>
           </div>
@@ -149,11 +154,12 @@ export default function Home() {
       <section className="bg-white">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-primary-100 rounded-2xl h-96 flex items-center justify-center">
-              <div className="text-center text-primary-300">
-                <Eye size={64} className="mx-auto mb-4" />
-                <p>AI Visualization Engine</p>
-              </div>
+            <div className="relative rounded-2xl h-96 lg:h-[520px] overflow-hidden shadow-2xl">
+              <img
+                src="/designs/design1.jpeg"
+                alt="Navy beaded mermaid gown detailing by Lety Antony"
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             <div>
               <h2 className="mb-6">See It Before We Sew It</h2>
@@ -178,6 +184,68 @@ export default function Home() {
                 "What you approve is what you collect. This is our contract."
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Design Showcase / Atelier */}
+      <section id="gallery" className="bg-white">
+        <div className="container">
+          <div className="text-center mb-14">
+            <p className="text-sm font-semibold tracking-widest text-primary-500 uppercase mb-3">
+              The Atelier
+            </p>
+            <h2 className="mb-4">Recent Designs</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              A glimpse of our couture craftsmanship — hand-beaded bodices, structured tailoring,
+              and finish worthy of every occasion.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Featured video */}
+            <div className="relative rounded-xl overflow-hidden shadow-md aspect-[3/4] sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:aspect-auto bg-black">
+              <video
+                className="w-full h-full object-cover"
+                controls
+                muted
+                loop
+                playsInline
+                poster="/designs/design6.png"
+              >
+                <source src="/designs/design3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="absolute top-4 left-4 bg-primary-900/80 backdrop-blur px-3 py-1.5 rounded-lg">
+                <p className="text-xs font-semibold text-white uppercase tracking-wide">In Motion</p>
+              </div>
+            </div>
+
+            {[
+              { src: '/designs/design1.jpeg', alt: 'Navy beaded strapless mermaid gown by Lety Antony', label: 'Beaded Mermaid Gown' },
+              { src: '/designs/design2.jpeg', alt: 'Wine lace-sleeve beaded evening gown by Lety Antony', label: 'Wine Lace Evening Gown' },
+              { src: '/designs/design6.png', alt: 'Navy cape gown neckline detail by Lety Antony', label: 'Cape Gown — Neckline Detail' },
+              { src: '/designs/design4.jpeg', alt: 'Navy beaded gown with satin cape by Lety Antony', label: 'Beaded Cape Gown' },
+            ].map((item, i) => (
+              <div key={i} className="group relative rounded-xl overflow-hidden shadow-md aspect-[3/4]">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-semibold text-white">{item.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/order-inquiry" className="btn-primary">
+              Commission Your Piece
+            </Link>
           </div>
         </div>
       </section>
