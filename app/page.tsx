@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { CheckCircle, Zap, Eye, Truck, Sparkles, Clock, Users, Award } from 'lucide-react'
+import { CheckCircle, Zap, Eye, Truck, Sparkles, Clock, Users, Award, MapPin, Phone, Mail } from 'lucide-react'
 
 export default function Home() {
   return (
