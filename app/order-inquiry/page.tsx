@@ -14,10 +14,10 @@ import {
   Clock,
   AlertTriangle,
   CheckCircle,
-  Send,
 } from 'lucide-react'
 
 const BUSINESS_EMAIL = 'hello@letyantonyfh.com'
+const WHATSAPP_NUMBER = '2348036438208'
 
 export default function OrderInquiry() {
   const [form, setForm] = useState({
@@ -39,8 +39,9 @@ export default function OrderInquiry() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const subject = `Order Inquiry — ${form.service} — ${form.name}`
-    const body = [
+    const message = [
+      'Hello Lety Antony, I would like to make an order enquiry.',
+      '',
       `Name: ${form.name}`,
       `Email: ${form.email}`,
       `Phone: ${form.phone}`,
@@ -51,12 +52,14 @@ export default function OrderInquiry() {
       'Design Details / Vision:',
       form.description,
       '',
-      '(Reminder: please attach photos of outfits that match your idea.)',
+      '(I will attach photos of outfits that match my idea.)',
     ].join('\n')
 
-    window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`
+    window.open(
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
+      '_blank',
+      'noopener,noreferrer'
+    )
     setSubmitted(true)
   }
 
@@ -203,8 +206,8 @@ export default function OrderInquiry() {
           <div className="text-center mb-12">
             <h2 className="mb-4">Start Your Inquiry</h2>
             <p className="text-lg text-ink/70">
-              Fill in the details below. Submitting opens your email client with everything
-              pre-filled — just attach your reference photos and hit send.
+              Fill in the details below. Submitting opens a WhatsApp chat with us, with everything
+              pre-filled — just attach your reference photos and send. We&apos;ll reply directly.
             </p>
           </div>
 
@@ -212,11 +215,16 @@ export default function OrderInquiry() {
             <div className="mb-8 bg-accent/10 border border-accent/30 rounded-sm p-6 flex items-start gap-3">
               <CheckCircle className="text-accent flex-shrink-0 mt-0.5" size={22} />
               <p className="text-ink/80">
-                Your email draft has been opened. Don&apos;t forget to{' '}
-                <strong>attach photos</strong> of your outfit ideas before sending. If nothing
-                opened, email us directly at{' '}
-                <a href={`mailto:${BUSINESS_EMAIL}`} className="text-accent font-semibold underline">
-                  {BUSINESS_EMAIL}
+                WhatsApp is opening with your details ready to go. Don&apos;t forget to{' '}
+                <strong>attach photos</strong> of your outfit ideas, then hit send. If nothing
+                opened, message us directly on{' '}
+                <a
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent font-semibold underline"
+                >
+                  WhatsApp +234 803 643 8208
                 </a>
                 .
               </p>
@@ -344,13 +352,13 @@ export default function OrderInquiry() {
             <div className="flex items-start gap-2 text-sm text-ink/55">
               <Camera size={18} className="flex-shrink-0 mt-0.5" />
               <span>
-                Tip: after submitting, attach photos of outfits that match your idea to your email.
+                Tip: once WhatsApp opens, attach photos of outfits that match your idea to the chat.
               </span>
             </div>
 
-            <button type="submit" className="btn-primary w-full flex items-center justify-center gap-2">
-              <Send size={18} />
-              Submit Inquiry
+            <button type="submit" className="btn-accent w-full flex items-center justify-center gap-2">
+              <MessageSquare size={18} />
+              Send via WhatsApp
             </button>
           </form>
 
