@@ -354,16 +354,28 @@ export default function OrderInquiry() {
             </button>
           </form>
 
-          {/* Direct email */}
+          {/* Direct contact */}
           <div className="text-center mt-10">
-            <p className="text-ink/70 mb-2">Prefer to email us directly?</p>
-            <a
-              href={`mailto:${BUSINESS_EMAIL}`}
-              className="inline-flex items-center gap-2 text-accent font-semibold hover:text-primary-600 transition-colors"
-            >
-              <Mail size={18} />
-              {BUSINESS_EMAIL}
-            </a>
+            <p className="text-ink/70 mb-4">Prefer to reach us directly?</p>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
+              <a
+                href={`mailto:${BUSINESS_EMAIL}`}
+                className="inline-flex items-center gap-2 text-accent font-semibold hover:text-gold-deep transition-colors"
+              >
+                <Mail size={18} />
+                {BUSINESS_EMAIL}
+              </a>
+              <span className="hidden sm:inline text-ink/30">·</span>
+              <a
+                href="https://wa.me/2348036438208"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-accent font-semibold hover:text-gold-deep transition-colors"
+              >
+                <MessageSquare size={18} />
+                WhatsApp +234 803 643 8208
+              </a>
+            </div>
           </div>
         </div>
       </section>

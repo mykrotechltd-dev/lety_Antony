@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { Mail, Phone, MapPin, Instagram, MessageCircle } from 'lucide-react'
 
-const WHATSAPP = 'https://wa.me/2340000000000'
+const WHATSAPP = 'https://wa.me/2348036438208'
+const INSTAGRAM = 'https://www.instagram.com/letyantony'
 
 export default function Footer() {
   return (
@@ -35,7 +36,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="flex-shrink-0 text-accent" />
-                <span>+234 (0) XXX XXX XXXX</span>
+                <a href="tel:+2348036438208" className="hover:text-accent transition-colors">+234 803 643 8208</a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="flex-shrink-0 text-accent" />
@@ -58,7 +59,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Lety Antony Fashion House
           </p>
           <div className="flex gap-5">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-accent transition-colors" aria-label="Instagram">
+            <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-accent transition-colors" aria-label="Instagram">
               <Instagram size={18} />
             </a>
             <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="text-ivory/60 hover:text-accent transition-colors" aria-label="WhatsApp">

@@ -35,3 +35,7 @@ yarn-error.log*
 /Letty_designs/
 /letty_logo.png
 /Letty_logo.png
+
+# Source infographics (optimized copies live in public/graphics)
+/infor graphics/
+/Infor graphics/

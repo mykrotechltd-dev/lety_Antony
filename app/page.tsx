@@ -10,7 +10,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 
-const WHATSAPP = 'https://wa.me/2340000000000'
+const WHATSAPP = 'https://wa.me/2348036438208'
 
 export default function Home() {
   return (
@@ -81,8 +81,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- The Problem ---------- */}
+      <section className="bg-ivory">
+        <div className="container">
+          <div className="max-w-2xl mb-12">
+            <p className="eyebrow mb-4">The Reckoning</p>
+            <h2 className="mb-5">“My tailor disappointed me.”</h2>
+            <p className="text-ink/70">
+              A national cliché — missed deadlines, hidden processes, endless follow-ups. We
+              re-engineered the whole thing into one disciplined, visible line.
+            </p>
+          </div>
+          <figure className="rounded-sm border border-ink/10 bg-white p-3 md:p-5 shadow-sm">
+            <img
+              src="/graphics/problem-solution.jpg"
+              alt="The old way — a tangle of verbal briefs, hidden processes and late delivery — versus the Lety Antony way: a clean, AI-assisted, tracked seven-day pipeline"
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </figure>
+        </div>
+      </section>
+
       {/* ---------- Services (atelier index) ---------- */}
-      <section id="services" className="bg-ivory">
+      <section id="services" className="bg-bone">
         <div className="container">
           <div className="max-w-2xl mb-16">
             <p className="eyebrow mb-4">The House</p>
@@ -116,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* ---------- Process ---------- */}
-      <section id="process" className="bg-bone">
+      <section id="process" className="bg-ivory">
         <div className="container">
           <div className="max-w-2xl mb-16">
             <p className="eyebrow mb-4">The Process</p>
@@ -148,7 +170,16 @@ export default function Home() {
             ))}
           </ol>
 
-          <div className="mt-16 flex items-start gap-4 border border-ink/10 bg-ivory p-8">
+          <figure className="mt-16 rounded-sm border border-ink/10 bg-white p-3 md:p-5 shadow-sm">
+            <img
+              src="/graphics/tracker.jpg"
+              alt="The production tracker — WhatsApp updates pushed at each stage from Order Intake through Fabric Check, Cutting, Sewing, Finishing, QC and Collection"
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </figure>
+
+          <div className="mt-8 flex items-start gap-4 border border-ink/10 bg-bone p-8">
             <MessageCircle className="text-accent flex-shrink-0 mt-1" size={22} />
             <p className="text-ink/75">
               <span className="font-display text-lg text-ink">The tracker is the product.</span>{' '}
@@ -160,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* ---------- AI Visualisation ---------- */}
-      <section className="bg-ivory">
+      <section className="bg-bone">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative h-[26rem] lg:h-[34rem] overflow-hidden order-2 lg:order-1">
@@ -195,6 +226,15 @@ export default function Home() {
               </p>
             </div>
           </div>
+
+          <figure className="mt-16 rounded-sm border border-ink/10 bg-white p-3 md:p-6 shadow-sm">
+            <img
+              src="/graphics/ai-workflow.jpg"
+              alt="The expectation-gap closer: client measurements and a text prompt feed the AI styling engine, which returns a photorealistic render the client approves before production"
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </figure>
         </div>
       </section>
 
@@ -295,8 +335,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------- Partner Showroom ---------- */}
+      <section id="showroom" className="bg-bone">
+        <div className="container">
+          <div className="max-w-2xl mb-12">
+            <p className="eyebrow mb-4">The Showroom</p>
+            <h2 className="mb-5">A wall of fabric, on consignment</h2>
+            <p className="text-ink/70">
+              Vetted wholesalers and brands stock their materials in our showroom — so you browse
+              rare fabrics, see them rendered on your proportions, and begin production the same day.
+              One visit, not a market trip.
+            </p>
+          </div>
+          <figure className="rounded-sm border border-ink/10 bg-white p-3 md:p-6 shadow-sm">
+            <img
+              src="/graphics/flywheel.jpg"
+              alt="The value-exchange flywheel: fabric partners provide premium inventory on consignment; Lety Antony provides foot traffic and AI visualisation; the client gains a one-stop experience"
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </figure>
+        </div>
+      </section>
+
       {/* ---------- Pricing ---------- */}
-      <section className="bg-bone">
+      <section className="bg-ivory">
         <div className="container">
           <div className="max-w-2xl mb-16">
             <p className="eyebrow mb-4">Investment</p>
@@ -347,26 +410,24 @@ export default function Home() {
       </section>
 
       {/* ---------- Who we serve ---------- */}
-      <section className="bg-ivory">
+      <section className="bg-bone">
         <div className="container">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-2xl mb-12">
             <p className="eyebrow mb-4">Clientele</p>
-            <h2>Who we dress</h2>
+            <h2 className="mb-5">Who we dress</h2>
+            <p className="text-ink/70">
+              From Abuja&apos;s professionals to the diaspora and corporate houses — dressed with the
+              same certainty.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-            {[
-              { num: 'I', title: 'Busy Professionals', desc: 'Time-poor, mid-to-high income. You value reliability and cannot chase tailors.' },
-              { num: 'II', title: 'Event & Aso-Ebi', desc: 'Weddings, groups, celebrations — coordinated and delivered on a hard deadline.' },
-              { num: 'III', title: 'Corporate', desc: 'Banks, schools, hospitality — branded uniforms produced in volume.' },
-              { num: 'IV', title: 'Diaspora', desc: 'Order online, approve by render, receive by courier — from anywhere.' },
-            ].map((m, idx) => (
-              <div key={idx} className="border-t border-ink/15 pt-6">
-                <span className="font-display text-2xl text-accent">{m.num}</span>
-                <h3 className="text-xl mt-3 mb-3">{m.title}</h3>
-                <p className="text-ink/70 text-base">{m.desc}</p>
-              </div>
-            ))}
-          </div>
+          <figure className="rounded-sm border border-ink/10 bg-white p-3 md:p-6 shadow-sm">
+            <img
+              src="/graphics/markets.jpg"
+              alt="Our markets: primary Abuja core (civil servants, diplomats, event clients), secondary diaspora ordering traditional wear, and B2B corporate uniform production"
+              loading="lazy"
+              className="w-full h-auto"
+            />
+          </figure>
         </div>
       </section>
 
@@ -406,7 +467,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-center gap-4">
                   <Phone className="text-accent flex-shrink-0" size={20} />
-                  <span className="text-ink/80">+234 (0) XXX XXX XXXX</span>
+                  <a href="tel:+2348036438208" className="text-ink/80 hover:text-accent transition-colors">+234 803 643 8208</a>
                 </li>
                 <li className="flex items-center gap-4">
                   <Mail className="text-accent flex-shrink-0" size={20} />
