@@ -15,13 +15,13 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed w-full top-0 z-40 bg-ivory/85 backdrop-blur-md border-b border-ink/10">
+    <header className="fixed w-full top-0 z-40 bg-bone border-b border-ink/10">
       <div className="container flex justify-between items-center py-5">
         <Link href="/" className="flex items-center" aria-label="Lety Antony Fashion House — home">
           <img
-            src="/letty_logo.png"
+            src="/logo.png"
             alt="Lety Antony Fashion Designer"
-            className="h-10 md:h-11 w-auto"
+            className="h-16 md:h-20 w-auto mix-blend-multiply"
           />
         </Link>
 
@@ -51,7 +51,7 @@ export default function Header() {
       </div>
 
       {isOpen && (
-        <nav className="md:hidden bg-ivory border-t border-ink/10 py-6">
+        <nav className="md:hidden bg-bone border-t border-ink/10 py-6">
           <div className="container flex flex-col gap-5">
             {navLinks.map((l) => (
               <Link

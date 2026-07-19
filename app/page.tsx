@@ -66,7 +66,7 @@ export default function Home() {
             <div className="lg:col-span-6">
               <div className="relative h-[26rem] md:h-[34rem] lg:h-[40rem] overflow-hidden">
                 <img
-                  src="/designs/design4.jpeg"
+                  src="/designs/g-navy-cape.jpg"
                   alt="Navy beaded evening gown with satin cape, hand-finished at the Lety Antony atelier"
                   className="w-full h-full object-cover object-top"
                 />
@@ -165,8 +165,8 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="relative h-[26rem] lg:h-[34rem] overflow-hidden order-2 lg:order-1">
               <img
-                src="/designs/design1.jpeg"
-                alt="Hand-beaded navy mermaid gown — bodice detail from the Lety Antony atelier"
+                src="/designs/g-wine-gown.jpg"
+                alt="Wine lace mermaid gown with hand-beaded bodice from the Lety Antony atelier"
                 className="w-full h-full object-cover object-top"
               />
             </div>
@@ -217,7 +217,7 @@ export default function Home() {
                 muted
                 loop
                 playsInline
-                poster="/designs/design6.png"
+                poster="/designs/g-navy-cape.jpg"
               >
                 <source src="/designs/design3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -228,10 +228,16 @@ export default function Home() {
             </div>
 
             {[
-              { src: '/designs/design1.jpeg', alt: 'Navy beaded strapless mermaid gown', label: 'Beaded Mermaid Gown' },
-              { src: '/designs/design2.jpeg', alt: 'Wine lace-sleeve beaded evening gown', label: 'Wine Lace Evening Gown' },
-              { src: '/designs/design6.png', alt: 'Navy cape gown neckline detail', label: 'Cape Gown — Detail' },
-              { src: '/designs/design4.jpeg', alt: 'Navy beaded gown with satin cape', label: 'Beaded Cape Gown' },
+              { src: '/designs/g-navy-embroidered.jpg', alt: 'Navy velvet ballgown with silver embroidery', label: 'Embellished Velvet Ballgown' },
+              { src: '/designs/g-red-ballgown.jpg', alt: 'Off-shoulder rouched red satin ballgown', label: 'Rouched Satin Ballgown' },
+              { src: '/designs/g-black-beaded.jpg', alt: 'Black beaded high-neck column gown', label: 'Beaded Black Column' },
+              { src: '/designs/g-emerald-satin.jpg', alt: 'Emerald green satin A-line gown with jewelled belt', label: 'Emerald Satin Gown' },
+              { src: '/designs/g-wine-gown.jpg', alt: 'Wine lace mermaid gown with beaded bodice', label: 'Wine Lace Mermaid' },
+              { src: '/designs/g-ivory-lace.jpg', alt: 'Ivory lace long-sleeve bridal gown', label: 'Lace Bridal Gown' },
+              { src: '/designs/g-navy-jumpsuit.jpg', alt: 'Tailored navy wrap jumpsuit with chain belt', label: 'Tailored Jumpsuit' },
+              { src: '/designs/g-black-suit.jpg', alt: 'Black three-piece tailored trouser suit', label: 'Three-Piece Suit' },
+              { src: '/designs/g-ivory-suit.jpg', alt: 'Ivory peplum blazer and trouser suit', label: 'Ivory Peplum Suit' },
+              { src: '/designs/g-black-column.jpg', alt: 'Black beaded long-sleeve column gown', label: 'Beaded Sheath Gown' },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden aspect-[3/4]">
                 <img
