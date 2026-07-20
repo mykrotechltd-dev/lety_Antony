@@ -179,13 +179,21 @@ export default function Home() {
             />
           </figure>
 
-          <div className="mt-8 flex items-start gap-4 border border-ink/10 bg-bone p-8">
-            <MessageCircle className="text-accent flex-shrink-0 mt-1" size={22} />
-            <p className="text-ink/75">
-              <span className="font-display text-lg text-ink">The tracker is the product.</span>{' '}
-              Automated WhatsApp &amp; SMS notifications land at every stage transition — no chasing,
-              no silence, no surprises on collection day.
-            </p>
+          <div className="mt-8 flex flex-col md:flex-row items-start gap-6">
+            <div className="flex-1 flex items-start gap-4 border border-ink/10 bg-bone p-8">
+              <MessageCircle className="text-accent flex-shrink-0 mt-1" size={22} />
+              <p className="text-ink/75">
+                <span className="font-display text-lg text-ink">The tracker is the product.</span>{' '}
+                Automated WhatsApp &amp; SMS notifications land at every stage transition — no chasing,
+                no silence, no surprises on collection day.
+              </p>
+            </div>
+            <Link
+              href="/track"
+              className="btn-accent flex-shrink-0 self-center"
+            >
+              Track an Order
+            </Link>
           </div>
         </div>
       </section>
