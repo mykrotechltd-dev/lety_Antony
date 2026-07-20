@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/#gallery', label: 'Designs' },
   { href: '/track', label: 'Track Order' },
   { href: '/#why', label: 'The House' },
+  { href: '/dashboard', label: 'Dashboard' },
 ]
 
 export default function Header() {
